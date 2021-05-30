@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>LigaBank</title>
+</head>
+<body>
+  <div class="container">
+    <!-- header: -->
+    <header class="header">
+      <a class="logo" href="#" aria-label="Домашняя страница">
+        <svg class="icon-logo" width="30" height="27" fill="none"><use xlink:href="./img/sprite.svg#icon-logo"></use></svg>
+        <span>ЛИГА Банк</span>
+      </a>
+      <nav class="header__navigator">
+        <ul class="header__navigator-list">
+          <li class="header__navigator-item"><a href="#">Услуги</a></li>
+          <li class="header__navigator-item"><a href="#">Рассчитать кредит</a></li>
+          <li class="header__navigator-item"><a href="#">Конвертер валют</a></li>
+          <li class="header__navigator-item"><a href="#">Контакты</a></li>
+          <li class="header__navigator-item"><a href="#">Задать вопрос</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="header__login">
+        <svg class="icon-login" width="30" height="27" fill="none"><use xlink:href="./img/sprite.svg#icon-login"></use></svg>
+        <span>Войти в Интернет-банк</span>
+      </a>
+    </header>
+
+    <!-- main: -->
+    <main>
+      <!-- banner: -->
+      <section class="banner">
+        <h1 class="visually-hidden">Причины обратиться в Лига Банк:</h1>
+        <div class="banner__loan">
+          <h2 class="banner__title">Лига Банк</h2>
+          <p class="banner__propose">Кредиты на любой случай</p>
+          <a class="banner__redirect" href="#">Рассчитать кредит</a>
+        </div>
+        <div class="banner__cards"></div>
+      </section>
+      <!-- converter: -->
+      <section class="converter">
+        <h2 class="converter__title">Конвертер валют</h2>
+        <!-- form: -->
+        <form class="sums">
+          <div class="sums__layout">
+            <div class="organazer">
+              <label for="sums__put">У меня есть</label>
+              <input type="text" class="sums__put" name="sums__put" id="sums__put" aria-label="Введите сумму, которую необходимо поменять">
+              <select>
+                <option>RUB</option>
+                <option>USD</option>
+                <option>EUR</option>
+                <option>GBR</option>
+              </select>            
+            </div>
+            <div class="sums__arrows">
+              <svg width="80" height="55" fill="none"><use xlink:href="./img/sprite.svg#icon-arrows"></use></svg>
+            </div>
+            <div class="organazer">
+              <label for="sums__takeoff">Хочу приобрести</label>
+              <input type="text" class="sums__takeoff" name="sums__takeoff" id="sums__takeoff" aria-label="Введите сумму, которую необходимо поменять">
+              <select>
+                <option>RUB</option>
+                <option>USD</option>
+                <option>EUR</option>
+                <option>GBR</option>
+              </select>            
+            </div>
+          </div>
+          <div class="sums__layout">
+            <div class="flatpickr">
+              <input type="text" placeholder="Select date..." aria-label="Выберите в календаре дату для текущего курса валюты">
+              <a aria-label="Календарь">
+                <svg width="41" height="44" fill="none"><use xlink:href="./img/sprite.svg#icon-calendar"></use></svg>
+              </a>
+            </div>
+            <button class="sums__submit" type="submit">Сохранить результат</button>
+          </div>
+        </form>
+        <!-- history: -->
+        <section class="history">
+          <h2 class="history__title">История конвертации</h2>
+          <div class="history__container">
+            <ul class="history__list">
+              <li class="history__item">
+                <span class="history__date">25.11.2020</span>
+                <span>1000 RUB</span>
+                <span class="history__arrow">
+                  <svg width="41" height="18" fill="none"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                </span>
+                <span>13,1234 USD</span>
+              </li>
+              <li class="history__item">
+                <span class="history__date">25.11.2020</span>
+                <span>1000 RUB</span>
+                <span class="history__arrow">
+                  <svg width="41" height="18" fill="none"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                </span>
+                <span>13,1234 USD</span>
+              </li>
+              <li class="history__item">
+                <span class="history__date">25.11.2020</span>
+                <span>1000 RUB</span>
+                <span class="history__arrow">
+                  <svg width="41" height="18" fill="none"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                </span>
+                <span>13,1234 USD</span>
+              </li>
+              <li class="history__item">
+                <span class="history__date">25.11.2020</span>
+                <span>1000 RUB</span>
+                <span class="history__arrow">
+                  <svg width="41" height="18" fill="none"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                </span>
+                <span>13,1234 USD</span>
+              </li>
+              <li class="history__item">
+                <span class="history__date">25.11.2020</span>
+                <span>1000 RUB</span>
+                <span class="history__arrow">
+                  <svg width="41" height="18" fill="none"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                </span>
+                <span>13,1234 USD</span>
+              </li>
+            </ul>
+            <ul class="history__list history__list--right">
+              <li class="history__item">
+                <span class="history__date">25.11.2020</span>
+                <span>1000 RUB</span>
+                <span class="history__arrow">
+                  <svg width="41" height="18" fill="none"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                </span>
+                <span>13,1234 USD</span>
+              </li>
+              <li class="history__item">
+                <span class="history__date">25.11.2020</span>
+                <span>1000 RUB</span>
+                <span class="history__arrow">
+                  <svg width="41" height="18" fill="none"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                </span>
+                <span>13,1234 USD</span>
+              </li>
+              <li class="history__item">
+                <span class="history__date">25.11.2020</span>
+                <span>1000 RUB</span>
+                <span class="history__arrow">
+                  <svg width="41" height="18" fill="none"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                </span>
+                <span>13,1234 USD</span>
+              </li>
+              <li class="history__item">
+                <span class="history__date">25.11.2020</span>
+                <span>1000 RUB</span>
+                <span class="history__arrow">
+                  <svg width="41" height="18" fill="none"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                </span>
+                <span>13,1234 USD</span>
+              </li>
+              <li class="history__item">
+                <span class="history__date">25.11.2020</span>
+                <span>1000 RUB</span>
+                <span class="history__arrow">
+                  <svg width="41" height="18" fill="none"><use xlink:href="./img/sprite.svg#icon-arrow"></use></svg>
+                </span>
+                <span>13,1234 USD</span>
+              </li>
+            </ul>
+          </div>
+          <button class="history__reset">Очистить историю</button>
+        </section>
+      </section>
+    </main>
+    <!-- footer: -->
+    <footer class="footer">
+      <div class="footer__target">
+        <a class="logo" href="#" aria-label="Домашняя страница">
+          <svg class="icon-logo" width="30" height="27" fill="none"><use xlink:href="./img/sprite.svg#icon-logo"></use></svg>
+          <span>ЛИГА Банк</span>
+        </a>
+        <p class="footer__location">150015, г. Москва, ул. Московская, д. 32 Генеральная лицензия Банка России №1050 <br />Ⓒ Лига Банк, 2019</p>
+      </div>
+      <nav>
+        <ul class="footer__navigator">
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Рассчитать кредит</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Задать вопрос</a></li>
+        </ul>
+      </nav>
+      <div class="footer__phone">
+        <p class="footer__icon">
+          <svg width="10" height="16" fill="none"><use xlink:href="./img/sprite.svg#icon-emergency"></use></svg>
+          <span>*0904</span>
+        </p>
+        <p class="footer__info">Бесплатно для абонентов МТС, Билайн, Мегафон, Теле2</p>
+      </div>
+      <div class="footer__mobile">
+        <p class="footer__icon">
+          <svg width="16" height="16" fill="none"><use xlink:href="./img/sprite.svg#icon-phone"></use></svg>
+          <span>8 800 111 22 33</span>
+        </p>
+        <p class="footer__info">Бесплатный для всех городов России</p>
+      </div>
+      <ul class="footer__websites">
+        <li>
+          <a href="#" class="footer__network" title="Найдите нас на сайте Фейсбук">
+            <svg width="9" height="16"><use xlink:href="./img/sprite.svg#icon-facebook"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer__network" title="Найдите нас на сайте Инстаграмм">
+            <svg width="16" height="16"><use xlink:href="./img/sprite.svg#icon-insta"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer__network" title="Найдите нас на сайте Твиттер">
+            <svg width="16" height="16"><use xlink:href="./img/sprite.svg#icon-twitter"></use></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="footer__network" title="Найдите нас на сайте Ютьюб">
+            <svg width="16" height="13"><use xlink:href="./img/sprite.svg#icon-youtube"></use></svg>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
