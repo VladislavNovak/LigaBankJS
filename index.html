@@ -51,7 +51,7 @@
           <div class="sums__layout">
             <div class="organazer">
               <label for="sums__cash">У меня есть</label>
-              <input type="number" class="sums__cash" value="0" name="sums__cash" id="sums__cash" aria-label="Введите сумму, которую необходимо поменять">
+              <input type="number" class="sums__input sums__cash" min="0" step="any" value="0" name="sums__cash" id="sums__cash" aria-label="Введите сумму, которую необходимо поменять" title="Валюта" required />
               <select class="sums__cash-type">
                 <option value="RUB">RUB</option>
                 <option value="USD">USD</option>
@@ -64,7 +64,7 @@
             </div>
             <div class="organazer">
               <label for="sums__exchanged">Хочу приобрести</label>
-              <input type="number" class="sums__exchanged" value="0" name="sums__exchanged" id="sums__exchanged" aria-label="Введите сумму, которую необходимо поменять">
+              <input type="number" class="sums__input sums__exchanged" min="0" step="any" value="0" name="sums__exchanged" id="sums__exchanged" aria-label="Введите сумму, которую необходимо поменять" title="Валюта" required />
               <select class="sums__exchanged-type">
                 <option value="RUB">RUB</option>
                 <option value="USD">USD</option>
@@ -74,7 +74,7 @@
             </div>
           </div>
           <div class="sums__layout">
-            <input class="flatpickr__setdate" type="date">
+            <input class="sums__flatpickr" type="date">
             <button class="sums__submit" type="submit">Сохранить результат</button>
           </div>
         </form>
