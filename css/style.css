@@ -68,7 +68,7 @@ body {
   width: auto;
   margin: 0 auto;
 
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   background-color: #e5e5e5;
 }
 
@@ -102,7 +102,7 @@ body {
 }
 
 .logo span {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
@@ -373,12 +373,66 @@ body {
   margin: 10px 0 10px 0;
 }
 
+/* -------------------------- эксперимент ---------------------------*/
+
+
+/* <div class="flatpickr">
+<input class="flatpickr__setdate" type="text" placeholder="Select date..." aria-label="Выберите в календаре дату для текущего курса валюты">
+<a aria-label="Календарь">
+  <svg width="41" height="44" fill="none"><use xlink:href="./img/sprite.svg#icon-calendar"></use></svg>
+</a>
+</div> */
+
+/* 
+.flatpickr {
+  position: relative;
+  margin: 10px;
+}
+
+.flatpickr__setdate {
+  width: 384px;
+  min-height: 56px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  
+  text-align: center;
+  border: 1px solid #1f1e25;
+  border-radius: 4px;
+  
+  cursor: pointer;
+}
+
+.flatpickr a {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 45px;
+  top: 6px;
+  right: 10px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+} */
+
+/* -------------------------- эксперимент ---------------------------*/
+
+/* 
+<input class="flatpickr__setdate" type="text" placeholder="Select date..." aria-label="Выберите в календаре дату для текущего курса валюты">
+<a aria-label="Календарь">
+  <svg width="41" height="44" fill="none"><use xlink:href="./img/sprite.svg#icon-calendar"></use></svg>
+</a> */
+
+/* 
 .flatpickr {
   display: flex;
   margin: 10px;
 }
 
-.flatpickr input {
+.flatpickr__setdate {
   width: 305px;
   min-height: 56px;
   font-weight: 400;
@@ -405,7 +459,52 @@ body {
   border-radius: 0 4px 4px 0;
 
   cursor: pointer;
+} */
+
+/* -------------------------- эксперимент ---------------------------*/
+
+/* <input class="flatpickr__setdate" type="date"> */
+
+.flatpickr__setdate {
+  position: relative;
+  
+  margin: 10px;
+  width: 384px;
+  height: 56px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+
+  text-align: center;
+  border: 1px solid #1f1e25;
+  border-radius: 4px;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  opacity: 1;
+  background: none;
+  z-index: 1;
+  width: 60px;
+  height: 100%;
+
+  cursor: pointer;
+}
+
+input[type="date"]:before {
+  content: '';
+  background: url(/img/callss.svg) no-repeat;
+
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 45px;
+  top: 4px;
+  right: 12px;
+  color: #999;
+}
+
+/* -------------------------- эксперимент ---------------------------*/
 
 .sums__submit {
   width: 382px;

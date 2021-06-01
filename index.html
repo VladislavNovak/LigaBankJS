@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#">
   <link rel="stylesheet" href="./css/style.css">
   <title>LigaBank</title>
 </head>
@@ -49,36 +50,31 @@
         <form class="sums">
           <div class="sums__layout">
             <div class="organazer">
-              <label for="sums__put">У меня есть</label>
-              <input type="text" class="sums__put" name="sums__put" id="sums__put" aria-label="Введите сумму, которую необходимо поменять">
-              <select>
-                <option>RUB</option>
-                <option>USD</option>
-                <option>EUR</option>
-                <option>GBR</option>
+              <label for="sums__cash">У меня есть</label>
+              <input type="number" class="sums__cash" value="0" name="sums__cash" id="sums__cash" aria-label="Введите сумму, которую необходимо поменять">
+              <select class="sums__cash-type">
+                <option value="RUB">RUB</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
               </select>            
             </div>
             <div class="sums__arrows">
               <svg width="80" height="55" fill="none"><use xlink:href="./img/sprite.svg#icon-arrows"></use></svg>
             </div>
             <div class="organazer">
-              <label for="sums__takeoff">Хочу приобрести</label>
-              <input type="text" class="sums__takeoff" name="sums__takeoff" id="sums__takeoff" aria-label="Введите сумму, которую необходимо поменять">
-              <select>
-                <option>RUB</option>
-                <option>USD</option>
-                <option>EUR</option>
-                <option>GBR</option>
+              <label for="sums__exchanged">Хочу приобрести</label>
+              <input type="number" class="sums__exchanged" value="0" name="sums__exchanged" id="sums__exchanged" aria-label="Введите сумму, которую необходимо поменять">
+              <select class="sums__exchanged-type">
+                <option value="RUB">RUB</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
               </select>            
             </div>
           </div>
           <div class="sums__layout">
-            <div class="flatpickr">
-              <input type="text" placeholder="Select date..." aria-label="Выберите в календаре дату для текущего курса валюты">
-              <a aria-label="Календарь">
-                <svg width="41" height="44" fill="none"><use xlink:href="./img/sprite.svg#icon-calendar"></use></svg>
-              </a>
-            </div>
+            <input class="flatpickr__setdate" type="date">
             <button class="sums__submit" type="submit">Сохранить результат</button>
           </div>
         </form>
@@ -230,5 +226,6 @@
       </ul>
     </footer>
   </div>
+  <script src="./js/main.js"></script>
 </body>
 </html>
