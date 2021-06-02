@@ -1,4 +1,4 @@
-async function getCurrencies (dateQuery = 'https://www.cbr-xml-daily.ru/daily_json.js') {
+const getCurrencies = async (dateQuery = 'https://www.cbr-xml-daily.ru/daily_json.js') => {
   const response = await fetch(dateQuery);
   const data = await response.json();
   // console.log(data);
@@ -35,7 +35,7 @@ const exchangedType = bodyElement.querySelector(`.sums__exchanged-type`);
 
 const sumsSubmit = bodyElement.querySelector(`.sums`);
 
-const datePicker = bodyElement.querySelector(`.flatpickr__setdate`);
+const datePicker = bodyElement.querySelector(`.sums__flatpickr`);
 datePicker.valueAsDate = currentDate;
 
 datePicker.addEventListener("change", ({target}) => {
@@ -109,10 +109,12 @@ sumsSubmit.addEventListener("submit", (evt) => {
     return;
   }
 
-  history.push(currentAction);
+  history.unshift(currentAction);
+  // history.push(currentAction);
   console.log(history);
   if (history.length > 10) {
-    history.shift();
+    history.pop();
+    // history.shift();
   }
 });
 
